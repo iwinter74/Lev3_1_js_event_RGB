@@ -29,16 +29,22 @@ function andernRegler() {
     // console.log("green is " + document.getElementById("grun").value)
     // console.log("blue is " + document.getElementById("blau").value)
     r = red.value
+    r = Number(r)
     console.log(r)
     g = green.value
+    g= Number(g)
     console.log(g)
+    b=Number(b)
     b = blue.value
+    b=Number(b)
     console.log(b)
     // RGBToHex(r,g,b)
-    r = r.toString(16);
-    g = g.toString(16);
+  r = r.toString(16);
+  console.log("rHex" + r)
+  g = g.toString(16);
+  console.log("gHex" + g)
     b = b.toString(16);
-  
+  console.log("bHex" + b)
     if (r.length == 1)
       r = "0" + r;
     if (g.length == 1)
@@ -46,27 +52,28 @@ function andernRegler() {
     if (b.length == 1)
       b = "0" + b;
   
-    color= "#" + r + g + b;
+  color = `#${r}${g}${b}`;
+  console.log(color)
   body[0].style.background = color
   console.log(color)
 }
 
 
 
-// function RGBToHex(r,g,b) {
-//   r = r.toString(16);
-//   g = g.toString(16);
-//   b = b.toString(16);
+function RGBToHex(r,g,b) {
+  r = r.toString(16);
+  g = g.toString(16);
+  b = b.toString(16);
 
-//   if (r.length == 1)
-//     r = "0" + r;
-//   if (g.length == 1)
-//     g = "0" + g;
-//   if (b.length == 1)
-//     b = "0" + b;
+  if (r.length == 1)
+    r = "0" + r;
+  if (g.length == 1)
+    g = "0" + g;
+  if (b.length == 1)
+    b = "0" + b;
 
-//   color = "#" + r + g + b;
-//   console.log(color)
-// }
+  color = "#" + r + g + b;
+  console.log(color)
+}
 
-// RGBToHex(211,121,159)
+RGBToHex(211,121,159)
